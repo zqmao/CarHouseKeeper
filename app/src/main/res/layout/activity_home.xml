@@ -113,5 +113,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/rel_line"
-        android:layout_alignParentStart="true"></com.wing.test.carhousekeeper.view.MyViewPager>
+        android:layout_below="@+id/view_action_bar"
+        android:layout_alignParentStart="true">
+
+    </com.wing.test.carhousekeeper.view.MyViewPager>
 </RelativeLayout>
