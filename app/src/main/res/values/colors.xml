@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_3f51b5">#3F51B5</color>
+    <color name="color_303f9f">#303F9F</color>
+    <color name="color_ff4081">#FF4081</color>
+
+    <color name="color_d5d5d5">#d5d5d5</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_f23030">#f23030</color>
+    <color name="color_ffffff">#ffffff</color>
+
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_f5f8fa">#f5f8fa</color>
+    <color name="color_f8f8f8">#f8f8f8</color>
+    <color name="color_019fe8">#019fe8</color>
+    <color name="color_0070c6">#0070c6</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_c90000">#c90000</color>
+    <color name="color_4a97d8">#4a97d8</color>
+    <color name="color_80cff4">#80cff4</color>
+    <color name="color_e3e3e3">#e3e3e3</color>
+    <color name="color_ecf1f4">#ecf1f4</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_fafafa">#fafafa</color>
+    <color name="color_c9c9c9">#c9c9c9</color>
+    <color name="color_67bcf1">#67bcf1</color>
+    <color name="color_4c4c4c">#4c4c4c</color>
+    <color name="color_808080">#808080</color>
+    <color name="color_e61a1a">#e61a1a</color>
+    <color name="color_4d4d4d">#4d4d4d</color>
+    <color name="color_cdcdcd">#cdcdcd</color>
+
+    <color name="divider">#ffd2d2d2</color>
+
+    <color name="full_transparent">#00000000</color>
+    <!--  幸运转盘-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--  幸运转盘-->
+    <!-- 新年换肤-->
+    <color name="color_ebcf12">#ebcf12</color>
+    <color name="color_d41e24">#d41e24</color>
+    <color name="color_ee9194">#ee9194</color>
+    <!-- 新年换肤-->
+</resources>

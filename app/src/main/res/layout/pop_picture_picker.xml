@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btnPickByTake"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="拍照"
+        android:onClick="onClick"
+        android:background="@drawable/selector_main_bg"
+        android:textColor="@color/color_000000"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnPickBySelect"
+        android:layout_marginTop="1px"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="从图库选择"
+        android:onClick="onClick"
+        android:textColor="@color/color_000000"
+        android:background="@drawable/selector_main_bg"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/pic_cancel"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_000000"
+        android:background="@drawable/selector_main_bg"
+        android:textSize="14sp" />
+</LinearLayout>
