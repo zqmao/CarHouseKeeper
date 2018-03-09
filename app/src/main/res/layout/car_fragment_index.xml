@@ -1,17 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_3f51b5">
-
-    <TextView
+    android:background="@drawable/index_bg">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AAAA"
-        android:textColor="@color/color_000000"
-        android:textSize="20sp"
-        android:gravity="center"
-        />
+        android:layout_marginTop="75dp"
+       >
 
-</LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/index_car_top_left"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/car_main"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="135dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/index_car_top_left"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/car_main"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="135dp"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/car_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/index_car_main"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/index_car_bottom_left"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/car_main"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="140dp"
+            android:layout_marginRight="8dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/index_car_top_left"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/car_main"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="140dp"
+            android:layout_marginRight="10dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp">
+            <ImageView
+                android:id="@+id/faults_indicate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/index_faults_indicate"
+                android:layout_marginBottom="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/faults_indicate"
+                android:background="@drawable/index_safety_warning"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/index_car_bottom_left_2"
+        android:layout_marginBottom="130dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="90dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/index_headlight_yellow9"
+        android:layout_gravity="top|center"
+        />
+</FrameLayout>
