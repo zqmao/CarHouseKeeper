@@ -65,7 +65,6 @@ public class HomeActivity  extends BaseActivity {
         pActionBar.getActionBarLeft().setImageResource((R.drawable.home_page_left));
         pActionBar.setActionBarRightVisible();
         pActionBar.getActionBarRight().setImageResource(R.drawable.home_page_right);
-        pActionBar.setActionBarTitleText("首页");
     }
 
     private void  initFragments(){
@@ -84,7 +83,7 @@ public class HomeActivity  extends BaseActivity {
         list_layout.add(layoutTirepressure);
         list_layout.add(layoutPerformance);
         list_layout.add(layoutSelf);
-        changeTab(0);
+        changeTab(0,"首页");
     }
 
     private class HomeFragmentAdapter extends FragmentStatePagerAdapter {
@@ -124,34 +123,35 @@ public class HomeActivity  extends BaseActivity {
     public void onViewClicked(final View view) {
         switch (view.getId()) {
             case R.id.layoutHome:
-                changeTab(0);
+                changeTab(0,"首页");
                 vp.setCurrentItem(0,false);
                 break;
             case R.id.layoutCheDeng:
-                changeTab(1);
+                changeTab(1,"车灯");
                 vp.setCurrentItem(1,false);
                 break;
             case R.id.layoutTirepressure:
-                changeTab(2);
+                changeTab(2,"胎压");
                 vp.setCurrentItem(2,false);
                 break;
             case R.id.layoutPerformance:
-                changeTab(3);
+                changeTab(3,"性能");
                 vp.setCurrentItem(3,false);
                 break;
             case R.id.layoutSelf:
-                changeTab(4);
+                changeTab(4,"我的");
                 vp.setCurrentItem(4,false);
                 break;
         }
     }
-    private void changeTab(int pos) {
+    private void changeTab(int pos,String title) {
         for (int i = 0; i < list_layout.size(); i++) {
             if (pos == i)
                 list_layout.get(pos).setSelected(true);
             else
                 list_layout.get(i).setSelected(false);
         }
+        pActionBar.setActionBarTitleText(title);
     }
 
 }
