@@ -54,13 +54,13 @@ public class HomeActivity  extends BaseActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         initActionBar();
-        initTitle();
+        initTitleBar();
         initFragments();
         initLayouts();
 
     }
 
-    private void initTitle(){
+    private void initTitleBar(){
         pActionBar.setActionBarLeftVisible();
         pActionBar.getActionBarLeft().setImageResource((R.drawable.home_page_left));
         pActionBar.setActionBarRightVisible();
@@ -74,6 +74,7 @@ public class HomeActivity  extends BaseActivity {
         mFragments.put(3, PropertyFragment.getInstance());
         mFragments.put(4, SelfFragment.getInstance());
         mAdapter = new HomeFragmentAdapter(getSupportFragmentManager());
+        vp.setScrollble(false);
         vp.setAdapter(mAdapter);
     }
 
@@ -115,6 +116,8 @@ public class HomeActivity  extends BaseActivity {
             }
             return PagerAdapter.POSITION_NONE;
         }
+
+
 
     }
 

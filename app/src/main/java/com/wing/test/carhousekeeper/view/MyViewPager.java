@@ -11,8 +11,9 @@ import android.view.MotionEvent;
 
 public class MyViewPager extends ViewPager {
 
-    private boolean isScroll = true;
-
+    private boolean scrollble = true;
+    private int startX;
+    private int startY;
     public MyViewPager(Context context) {
         super(context);
     }
@@ -26,26 +27,53 @@ public class MyViewPager extends ViewPager {
         return super.dispatchTouchEvent(ev);
     }
 
+
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (isScroll){
-            return super.onInterceptTouchEvent(ev);
-        }else{
-            return false;
+    public boolean onTouchEvent(MotionEvent ev)
+    {
+        if (!scrollble)
+        {
+            return true;
         }
+        return super.onTouchEvent(ev);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-        if (isScroll){
-            return super.onTouchEvent(ev);
-        }else {
-            return true;// 可行,消费,拦截事件
+    public boolean onInterceptTouchEvent(MotionEvent ev)
+    {
+
+        switch (ev.getAction())
+        {
+            case MotionEvent.ACTION_DOWN:
+                startX = (int) ev.getX();
+                startY = (int) ev.getY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+
+//                int dX = (int) (ev.getX() - startX);
+                int dY = (int) (ev.getY() - startX);
+                if (Math.abs(dY)>0)  // 说明上下方向滑动了
+                {
+                    return false;
+                } else
+                {
+                    return true;
+                }
+            case MotionEvent.ACTION_UP:
+                break;
         }
+
+        return super.onInterceptTouchEvent(ev);
     }
 
-    public void setScroll(boolean scroll) {
-        isScroll = scroll;
+    public boolean isScrollble()
+    {
+        return scrollble;
+    }
+
+    public void setScrollble(boolean scrollble)
+    {
+        this.scrollble = scrollble;
     }
 
 }

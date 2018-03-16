@@ -3,12 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/self_bg"
     android:orientation="vertical">
-
+    <com.wing.test.carhousekeeper.view.CuteActionBar
+        android:id="@+id/view_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/std_height" />
     <LinearLayout
-        android:id="@+id/photoNameLay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -18,31 +19,19 @@
         android:paddingBottom="10dp"
         android:layout_marginBottom="14dp"
         android:background="@color/color_191919">
-        <ImageView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/default_head_img"/>
-        <LinearLayout
+        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_weight="1">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="安智恒远"
-                android:textSize="17sp"
-                android:textColor="@color/color_ffffff"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="个人信息"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:textColor="@color/color_b9b9b9"/>
-        </LinearLayout>
+            android:text="头像"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/color_ffffff"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_head_img"
+            android:layout_marginRight="15dp"/>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,15 +50,69 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="车辆"
+            android:text="修改密码"
             android:textSize="14sp"
             android:textColor="@color/color_ffffff"
-            android:drawablePadding="7dp"
-            android:drawableLeft="@drawable/self_car"/>
+           />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/self_point"/>
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/arrow_right"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_383838"
+        android:layout_marginLeft="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:gravity="center_vertical"
+        android:background="@color/color_191919">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="绑定手机/更换手机"
+            android:textSize="14sp"
+            android:textColor="@color/color_ffffff"
+           />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/arrow_right"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_383838"
+        android:layout_marginLeft="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:gravity="center_vertical"
+        android:background="@color/color_191919">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="邮箱绑定"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,15 +134,14 @@
         android:gravity="center_vertical"
         android:layout_marginBottom="14dp"
         android:background="@color/color_191919">
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="设备绑定"
-            android:textSize="14sp"
+            android:layout_weight="1"
+            android:text="紧急联系人"
             android:textColor="@color/color_ffffff"
-            android:drawablePadding="7dp"
-            android:drawableLeft="@drawable/self_device_bind"/>
+            android:textSize="14sp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -107,85 +149,5 @@
             android:layout_marginLeft="7dp"
             android:background="@drawable/arrow_right"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:paddingTop="13dp"
-        android:paddingBottom="13dp"
-        android:gravity="center_vertical"
-        android:background="@color/color_191919">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="报告问题"
-            android:textSize="14sp"
-            android:textColor="@color/color_ffffff"
-            android:drawablePadding="7dp"
-            android:drawableLeft="@drawable/self_report_prob"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:background="@drawable/arrow_right"/>
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/color_383838"
-        android:layout_marginLeft="25dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:paddingTop="13dp"
-        android:paddingBottom="13dp"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="14dp"
-        android:background="@color/color_191919">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="常见问题"
-            android:textSize="14sp"
-            android:textColor="@color/color_ffffff"
-            android:drawablePadding="7dp"
-            android:drawableLeft="@drawable/self_common_prob"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:background="@drawable/arrow_right"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:paddingTop="13dp"
-        android:paddingBottom="13dp"
-        android:gravity="center_vertical"
-        android:background="@color/color_191919">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="隐私和条款"
-            android:textSize="14sp"
-            android:textColor="@color/color_ffffff"
-            android:drawablePadding="7dp"
-            android:drawableLeft="@drawable/self_privacy_policy"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:background="@drawable/arrow_right"/>
-    </LinearLayout>
 </LinearLayout>
