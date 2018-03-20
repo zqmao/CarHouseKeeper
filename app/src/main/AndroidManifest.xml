@@ -82,6 +82,8 @@
         </activity>
         <activity android:name=".activity.LightSettingActivity">
         </activity>
+        <activity android:name=".activity.UpdatePasswordActivity">
+        </activity>
 
     </application>
 

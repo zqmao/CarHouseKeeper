@@ -1,5 +1,6 @@
 package com.wing.test.carhousekeeper.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,7 +10,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.jph.takephoto.model.TResult;
 import com.wing.test.carhousekeeper.R;
-import com.wing.test.carhousekeeper.util.AppUtils;
 import com.wing.test.carhousekeeper.util.EventTypeBundle;
 
 import org.greenrobot.eventbus.EventBus;
@@ -31,6 +31,9 @@ private static final String TAG = EditSelfActivity.class.getName();
     @BindView(R.id.headIv)
     ImageView headIv;
 
+    @BindView(R.id.updatePassword)
+    LinearLayout updatePassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +52,15 @@ private static final String TAG = EditSelfActivity.class.getName();
     }
 
 
-    @OnClick({ R.id.imgHead})
+    @OnClick({ R.id.imgHead,R.id.updatePassword})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imgHead:
                 pickerPopwindow.showPickerWindow(view);
                 break;
-
+            case R.id.updatePassword:
+                startActivity(new Intent(EditSelfActivity.this, UpdatePasswordActivity.class));
+                break;
         }
     }
 
