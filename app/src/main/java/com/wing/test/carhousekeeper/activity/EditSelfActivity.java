@@ -1,43 +1,43 @@
 package com.wing.test.carhousekeeper.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
-import android.util.SparseArray;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.jph.takephoto.model.TResult;
 import com.wing.test.carhousekeeper.R;
-import com.wing.test.carhousekeeper.fragment.index.IndexFragment;
-import com.wing.test.carhousekeeper.fragment.light.LightFragment;
-import com.wing.test.carhousekeeper.fragment.pressure.PressureFragment;
-import com.wing.test.carhousekeeper.fragment.property.PropertyFragment;
-import com.wing.test.carhousekeeper.fragment.self.SelfFragment;
-import com.wing.test.carhousekeeper.view.MyViewPager;
+import com.wing.test.carhousekeeper.util.AppUtils;
+import com.wing.test.carhousekeeper.util.EventTypeBundle;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class EditSelfActivity extends BaseActivity {
 
-//    @BindView(R.id.layoutHome)
-//    LinearLayout layoutHome;
+
+private static final String TAG = EditSelfActivity.class.getName();
+    @BindView(R.id.imgHead)
+    LinearLayout imgHead;
+    private String imagePath;
+    @BindView(R.id.headIv)
+    ImageView headIv;
 
 
-    private static final String TAG = EditSelfActivity.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_self_edit);
         ButterKnife.bind(this);
+        EventBus.getDefault().register(this);
         initActionBar();
         initTitleBar();
 
@@ -49,23 +49,68 @@ public class EditSelfActivity extends BaseActivity {
     }
 
 
+    @OnClick({ R.id.imgHead})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.imgHead:
+                pickerPopwindow.showPickerWindow(view);
+                break;
 
-
-
-//    @OnClick({R.id.layoutHome, R.id.layoutCheDeng, R.id.layoutTirepressure, R.id.layoutPerformance,R.id.layoutSelf})
-//    public void onViewClicked(final View view) {
-//        switch (view.getId()) {
-////            case R.id.layoutHome:
-////                changeTab(0,"首页");
-////                vp.setCurrentItem(0,false);
-////                break;
-//
-//        }
-//    }
+        }
+    }
 
     @Override
     public void onLeftClick(View view) {
         super.onLeftClick(view);
         finish();
+    }
+
+    @Override
+    public void takeCancel() {
+        super.takeCancel();
+    }
+
+    @Override
+    public void takeFail(TResult result, String msg) {
+        super.takeFail(result, msg);
+    }
+
+    @Override
+    public void takeSuccess(TResult result) {
+        super.takeSuccess(result);
+        imagePath = result.getImages().get(0).getCompressPath();
+        Glide.with(EditSelfActivity.this).load(imagePath).
+                diskCacheStrategy(DiskCacheStrategy.SOURCE).
+                placeholder(R.drawable.default_head_img).
+                bitmapTransform(new CropCircleTransformation(EditSelfActivity.this)).
+                into(headIv);
+    }
+//        Api.httpUpload(imagePath, new HttpCallBack(this, true, false, 0) {
+//            @Override
+//            public void onSuccess(String result) {
+//                super.onSuccess(result);
+//                UploadBean uploadBean = ParserUtil.fromJson(result, new TypeToken<UploadBean>() {
+//                }.getType());
+//                if (uploadBean.getError() == Api.HTTP_SUCCESSED) {
+//                    imgUrl = uploadBean.getUrl();
+//                    Glide.with(PersonSettingActivity.this).load(imgUrl).diskCacheStrategy(DiskCacheStrategy.SOURCE).placeholder(R.drawable.head).bitmapTransform(new CropCircleTransformation(PersonSettingActivity.this)).into(imgHead);
+//                }
+//            }
+//        });
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void eventSubscriber(EventTypeBundle bundle) {
+        switch (bundle.getType()) {
+            case EventTypeBundle.TYPE_PICK_BY_TANKE_EVENT_SYNC:
+                customHelper.onClick((View) bundle.getText(), getTakePhoto());
+                break;
+        }
     }
 }
