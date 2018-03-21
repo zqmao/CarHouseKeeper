@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/self_bg"
+    android:orientation="vertical">
+    <com.wing.test.carhousekeeper.view.CuteActionBar
+        android:id="@+id/view_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/std_height" />
+    <LinearLayout
+        android:id="@+id/notBindLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_ffffff"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textSize="14sp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/color_ffffff"/>
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:background="@null"
+                android:hint="请输入手机号码"
+                android:textColorHint="@color/color_68696f"
+                android:textColor="@color/color_ffffff"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@color/color_ffffff"
+            android:layout_marginBottom="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="验证码"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_ffffff"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:background="@null"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="请输入验证码"
+                android:textColorHint="@color/color_68696f"
+                android:textColor="@color/color_ffffff"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/self_get_verification_code"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@color/color_ffffff"
+            android:layout_marginBottom="20dp"
+            />
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/self_bind_phone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/hasBindLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/self_bind_replace_phone"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您当前已绑定手机号13233433567\n更换手机号后，个人信息保持不变"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/color_ffffff"/>
+        <ImageView
+            android:id="@+id/hasBindIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/self_change_phone"/>
+    </LinearLayout>
+
+
+</LinearLayout>

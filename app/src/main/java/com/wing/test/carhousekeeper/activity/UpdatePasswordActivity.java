@@ -2,11 +2,6 @@ package com.wing.test.carhousekeeper.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.jph.takephoto.model.TResult;
 import com.wing.test.carhousekeeper.R;
 import com.wing.test.carhousekeeper.util.EventTypeBundle;
 import org.greenrobot.eventbus.EventBus;
