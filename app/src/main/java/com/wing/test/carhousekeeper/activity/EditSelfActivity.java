@@ -35,6 +35,10 @@ private static final String TAG = EditSelfActivity.class.getName();
     LinearLayout updatePassword;
     @BindView(R.id.updatePhone)
     LinearLayout updatePhone;
+    @BindView(R.id.updateEmail)
+    LinearLayout updateEmail;
+    @BindView(R.id.updateContacter)
+    LinearLayout updateContacter;
 
 
     @Override
@@ -54,7 +58,7 @@ private static final String TAG = EditSelfActivity.class.getName();
     }
 
 
-    @OnClick({ R.id.imgHead,R.id.updatePassword,R.id.updatePhone})
+    @OnClick({ R.id.imgHead,R.id.updatePassword,R.id.updatePhone,R.id.updateEmail,R.id.updateContacter})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imgHead:
@@ -65,6 +69,12 @@ private static final String TAG = EditSelfActivity.class.getName();
                 break;
             case R.id.updatePhone:
                 startActivity(new Intent(EditSelfActivity.this, UpdatePhoneActivity.class));
+                break;
+            case R.id.updateEmail:
+                startActivity(new Intent(EditSelfActivity.this, UpdateEmailActivity.class));
+                break;
+            case R.id.updateContacter:
+                startActivity(new Intent(EditSelfActivity.this, UpdateContacterActivity.class));
                 break;
         }
     }

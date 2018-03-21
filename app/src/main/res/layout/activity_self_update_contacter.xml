@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/self_bg"
+    android:orientation="vertical">
+    <com.wing.test.carhousekeeper.view.CuteActionBar
+        android:id="@+id/view_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/std_height" />
+    
+    <LinearLayout
+        android:id="@+id/infoLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_dark_gray_10dp_dark_gray"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="22dp"
+           >
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="李铁柱"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/color_ffffff"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="22dp"
+            >
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="18709869340"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/editInfoLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+      >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="姓名"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:background="@null"
+                android:hint="请输入紧急联系人姓名"
+                android:textColorHint="@color/color_68696f"
+                android:textColor="@color/color_ffffff"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@color/color_ffffff"
+            android:layout_marginBottom="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/color_ffffff"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textSize="14sp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/color_ffffff"/>
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:background="@null"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="请输入手机号码"
+                android:textColorHint="@color/color_68696f"
+                android:textColor="@color/color_ffffff"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@color/color_ffffff"
+            android:layout_marginBottom="20dp"
+            />
+
+
+
+
+        <ImageView
+            android:id="@+id/finishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/self_update_contacter_finish"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

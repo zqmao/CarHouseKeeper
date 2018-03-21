@@ -100,6 +100,7 @@
         android:background="@color/color_383838"
         android:layout_marginLeft="25dp"/>
     <LinearLayout
+        android:id="@+id/updateEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="25dp"
@@ -129,6 +130,7 @@
         android:background="@color/color_383838"
         android:layout_marginLeft="25dp"/>
     <LinearLayout
+        android:id="@+id/updateContacter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="25dp"
