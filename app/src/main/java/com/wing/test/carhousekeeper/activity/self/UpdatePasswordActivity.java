@@ -1,8 +1,9 @@
-package com.wing.test.carhousekeeper.activity;
+package com.wing.test.carhousekeeper.activity.self;
 
 import android.os.Bundle;
 import android.view.View;
 import com.wing.test.carhousekeeper.R;
+import com.wing.test.carhousekeeper.activity.BaseActivity;
 import com.wing.test.carhousekeeper.util.EventTypeBundle;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

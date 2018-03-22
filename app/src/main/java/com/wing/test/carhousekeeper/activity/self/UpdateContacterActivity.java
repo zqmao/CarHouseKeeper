@@ -1,4 +1,4 @@
-package com.wing.test.carhousekeeper.activity;
+package com.wing.test.carhousekeeper.activity.self;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,13 +6,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.wing.test.carhousekeeper.R;
+import com.wing.test.carhousekeeper.activity.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import static com.wing.test.carhousekeeper.R.id.hasBindLay;
-import static com.wing.test.carhousekeeper.R.id.notBindLay;
 
 public class UpdateContacterActivity extends BaseActivity {
 

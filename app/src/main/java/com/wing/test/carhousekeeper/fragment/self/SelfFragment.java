@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.wing.test.carhousekeeper.R;
-import com.wing.test.carhousekeeper.activity.EditSelfActivity;
+import com.wing.test.carhousekeeper.activity.self.EditSelfActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

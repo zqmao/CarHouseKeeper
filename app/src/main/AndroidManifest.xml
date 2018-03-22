@@ -71,26 +71,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.HomeActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.EditSelfActivity">
+        <activity android:name=".activity.self.EditSelfActivity">
         </activity>
         <activity android:name=".activity.LightSettingActivity">
         </activity>
-        <activity android:name=".activity.UpdatePasswordActivity">
+        <activity android:name=".activity.self.UpdatePasswordActivity">
         </activity>
-        <activity android:name=".activity.UpdatePhoneActivity">
+        <activity android:name=".activity.self.UpdatePhoneActivity">
         </activity>
-        <activity android:name=".activity.UpdateEmailActivity">
+        <activity android:name=".activity.self.UpdateEmailActivity">
         </activity>
-        <activity android:name=".activity.UpdateContacterActivity">
+        <activity android:name=".activity.self.UpdateContacterActivity">
         </activity>
-
+        <activity android:name=".activity.HomeActivity">
+        </activity>
     </application>
 
 </manifest>

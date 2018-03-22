@@ -1,15 +1,12 @@
-package com.wing.test.carhousekeeper.activity;
+package com.wing.test.carhousekeeper.activity.self;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.wing.test.carhousekeeper.R;
+import com.wing.test.carhousekeeper.activity.BaseActivity;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class UpdateEmailActivity extends BaseActivity {
 

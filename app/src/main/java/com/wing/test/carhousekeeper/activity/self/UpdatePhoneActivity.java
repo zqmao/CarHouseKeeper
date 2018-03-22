@@ -1,4 +1,4 @@
-package com.wing.test.carhousekeeper.activity;
+package com.wing.test.carhousekeeper.activity.self;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,10 +6,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.wing.test.carhousekeeper.R;
-import com.wing.test.carhousekeeper.util.EventTypeBundle;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
+import com.wing.test.carhousekeeper.activity.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
